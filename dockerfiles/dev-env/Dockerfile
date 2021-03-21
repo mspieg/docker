@@ -139,7 +139,8 @@ RUN export PYTHONPATH=$PYBIND11_PREFIX/lib/python3.8/site-packages && \
     cd pybind11 && \
     mkdir build && \
     cd build && \
-    cmake -DCMAKE_INSTALL_PREFIX=${PYBIND11_PREFIX} -DCMAKE_BUILD_TYPE=Release ../. && \
+    cmake -DCMAKE_INSTALL_PREFIX=${PYBIND11_PREFIX} \
+          -DCMAKE_BUILD_TYPE=Release ../. && \
     make && \
     make install && \
     rm -rf /tmp/*
